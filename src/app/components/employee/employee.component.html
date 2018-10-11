@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card"> 
+        <div class="card-content">
+          <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+            <div class="input-field col-s12">
+              <input type="text" name="name" #name="ngModel" [(ngModel)] = "EmployeeService.selectedEmployee.name" placeholder="Ingrese su nombre">
+            </div>
+            <div class="input-field col-s12">
+              <input type="text" name="position" #position="ngModel" [(ngModel)] = "EmployeeService.selectedEmployee.position" placeholder="Ingrese su posición">
+            </div>
+            <div class="input-field col-s12">
+              <input type="text" name="office" #office="ngModel" [(ngModel)] = "EmployeeService.selectedEmployee.office" placeholder="Ingrese su oficina">
+            </div>
+            <div class="input-field col-s12">
+              <input type="text" name="salary" #salary="ngModel" [(ngModel)] = "EmployeeService.selectedEmployee.salary" placeholder="Ingrese su salario">
+            </div>
+
+            <div class="card-action">
+              <div class="input-field col-s12">
+                <button style="" class="btn right" (click)="addEmployee(employeeForm)" >Guardar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
